@@ -12,22 +12,22 @@ You're in this repository, so I'm confident you know what we are talking about (
   - SELinux is set to enforce mode.
 
 - **Installation**:
- - Copy `warsaw-bb.service` file to `/etc/systemd/system/warsaw-bb.service`
- - Set the owner:group to root and permission 644:
- ~~~
- # chown root: /etc/systemd/system/warsaw-bb.service
- # chmod 644 /etc/systemd/system/warsaw-bb.service
- ~~~
- - Add SELinux context `systemd_unit_file_t` to the file. This is the default for `/etc/systemd/system/` directory, so the command below will do the trick
+  - Copy `warsaw-bb.service` file to `/etc/systemd/system/warsaw-bb.service`
+  - Set the owner:group to root and permission 644:
   ~~~
-  # restorecon -RFvvv /etc/systemd/system/warsaw-bb.service
+  # chown root: /etc/systemd/system/warsaw-bb.service
+  # chmod 644 /etc/systemd/system/warsaw-bb.service
   ~~~
- - Reload systemd daemon:
- ~~~
- # systemctl daemon-reload
- ~~~
- - Try checking if `warsaw-bb.service` is now being displayed:
- ~~~
- # systemctl status warsaw-bb.service
- ~~~
- - Enable/start it as needed.
+  - Add SELinux context `systemd_unit_file_t` to the file. This is the default for `/etc/systemd/system/` directory, so the command below will do the trick
+   ~~~
+   # restorecon -RFvvv /etc/systemd/system/warsaw-bb.service
+   ~~~
+  - Reload systemd daemon:
+  ~~~
+  # systemctl daemon-reload
+  ~~~
+  - Try checking if `warsaw-bb.service` is now being displayed:
+  ~~~
+  # systemctl status warsaw-bb.service
+  ~~~
+  - Enable/start it as needed.
