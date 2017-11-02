@@ -18,7 +18,7 @@ You're in this repository, so I'm confident you know what we are talking about (
   # chown root: /etc/systemd/system/warsaw-bb.service
   # chmod 644 /etc/systemd/system/warsaw-bb.service
   ~~~
-  - Add SELinux context `systemd_unit_file_t` to the file. This is the default for `/etc/systemd/system/` directory, so the command below will do the trick
+  - Add SELinux context `systemd_unit_file_t` to the file. This is the default for `/etc/systemd/system/` directory. The command below will do the trick
    ~~~
    # restorecon -RFvvv /etc/systemd/system/warsaw-bb.service
    ~~~
