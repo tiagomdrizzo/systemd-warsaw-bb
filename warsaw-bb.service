@@ -1,0 +1,11 @@
+[Unit]
+Description=Banco do Brasil warsaw process
+
+[Service]
+Type=oneshot
+ExecStart=/etc/init.d/warsaw start
+ExecStop=/etc/init.d/warsaw stop
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
