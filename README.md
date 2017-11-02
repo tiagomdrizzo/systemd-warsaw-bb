@@ -6,7 +6,7 @@ You're in this repository, so I'm confident you know what we are talking about (
 - Tested on Fedora 26.
 
 - **Prerequisites**:
-  - Before starting, check if the "security module" is already installed in your system, and if not make to follow the internet bank installation process to the 'T'.
+  - Before starting, check if the "security module" is already installed on your system, and if not make sure to follow the internet bank installation process to the 'T'.
   - Hint: you will probably have issues to install the "security module" under Wayland (use X environment).
   - You might need to change the "security module" script location for `ExecStart` and/or `ExecStop` depending on your system.
   - SELinux is set to enforce mode.
